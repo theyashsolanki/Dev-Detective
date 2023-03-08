@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Detective</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <div class="container">
+            <!----------- heading section ---------->
+            <div class="heading">
+                <h1>DevDetective</h1>
+                <!--------------- mode section --------------------->
+                <div id="mode-container">
+                    <p data-Mode></p>
+                    <img class="MoonImg" src="./assets/images/moon-icon.svg"> <!--visible in light mode--> 
+                    <img class="SunImg" src="./assets/images/sun-icon.svg"> <!--visible in dark mode-->
+                </div>
+            </div>
+
+            <!----------------- input section -------------------->
+            <form class="form-container">
+                <img src="./assets/images/search-icon.svg"> 
+                <input placeholder="Enter a GitHub username..." id="InputSection" autocomplete="off">
+                <img class="InputDelete" src="./assets/images/cross2.png" width="12">  <!--cross img -->
+                <button id="SearchBtn">Search</button>
+            </form>
+
+            <!----------------- Information section ---------------->
+            <div class="Information-container">
+
+                <p class="errorMsg">404 not found</p>
+
+                <div class="Information active">
+
+                    <!------------------------ name and img ------------------------>
+                    <div class="Main-Info">
+                        <img id="info-img">
+    
+                        <div class="flexCol">
+                            <p id="info-name"></p>
+                            <a target="_blank" id="github-link"></a>
+                            <p id="info-joined"></span></p>
+                        </div>
+                    </div>
+    
+                    <p id="info-desc"></p>
+    
+                    <!----------------------- repo and follower count ----------------------->
+                    <div class="more-info">
+                        <div class="flexCol">
+                            <p>Repos</p>
+                            <p id="repo-num">0</p>
+                        </div>
+    
+                        <div class="flexCol">
+                            <p>Followers</p>
+                            <p id="follower-num">0</p>
+                        </div>
+    
+                        <div class="flexCol">
+                            <p>Following</p>
+                            <p id="following-num">0</p>
+                        </div>
+                    </div>
+    
+                    <!------------------ Social ---------------->
+                    <div class="grid">
+                        <div class="grid-item">
+                            <i data-feather="map-pin"></i>
+                            <span id="info-location"></span>
+                        </div>
+                        <a class="grid-item" id="blog-link" target="_blank">
+                            <i data-feather="link"></i>
+                            <span></span>
+                        </a>
+                        <a class="grid-item" id="twitter-link" target="_blank">
+                            <i data-feather="twitter"></i>
+                            <span></span>
+                        </a>
+                        <div class="grid-item" id="info-company" target="_blank">
+                            <i data-feather="briefcase"></i>
+                            <span></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+        
+        
+
+
+        <script src="script.js"></script>
+        <script>
+            feather.replace()
+        </script>
+    </div>
+</body>
+</html>
