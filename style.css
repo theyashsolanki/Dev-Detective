@@ -24,7 +24,7 @@
 }
 
 .container {
-    /* height: 600px; */
+    height: 80%;
     width: 600px;
     margin-bottom: 5%;
 }
@@ -72,6 +72,7 @@
 }
 
 .form-container input{
+    position: relative;
     width: 100%;
     padding: 1.5rem;
     padding-left: 3rem;
@@ -93,18 +94,20 @@
     position: absolute;
     left: 10px;
     pointer-events: none;
+    z-index: 10;
 }
 
 .form-container .InputDelete{
-    display: none;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    right: 26%;
 }
 
-.form-container:focus-within .InputDelete.active{
-    display: block;
-}
-
-.form-container:hover .InputDelete.active{
-    display: block;
+input:focus-within + .InputDelete.active,
+input:hover + .InputDelete.active,
+.InputDelete:hover.active {
+    opacity: 1;
 }
 
 #SearchBtn{
